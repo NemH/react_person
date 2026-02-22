@@ -3,10 +3,9 @@ import './Person.css';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person || {};
   const partnerLabel = sex === 'm' ? 'wife' : 'husband';
-  const partnerText =
-    isMarried === true
-      ? `${partnerName} is my ${partnerLabel}`
-      : 'I am not married';
+  const partnerText = isMarried
+    ? `${partnerName} is my ${partnerLabel}`
+    : 'I am not married';
 
   return (
     <section className="Person">
